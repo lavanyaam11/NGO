@@ -2,6 +2,7 @@ import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import NGOSignIn from './components/NGOSignIn'
+import NGOSignUp from './components/NGOSignUp'
 import React , {useState} from 'react'
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
         <NGOSignIn 
         show={modalShow}
         onHide={() => setModalShow(false)}/>
+        <br/>
+        <NGOSignUp />
         <br/>
         <Footer />
       </header>
