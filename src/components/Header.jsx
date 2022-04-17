@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Container, Button } from 'react-bootstrap';
+import { Navbar, Container, Dropdown, Button } from 'react-bootstrap';
 import logo from '../assets/gec.jpeg'
 
 export default function Header(props) {
@@ -15,7 +15,16 @@ export default function Header(props) {
                         className="d-inline-block align-top"
                     />{' '}
                 </Navbar.Brand>
-                <Button variant="primary" size="sm" onClick={() => props.setModalShow(true)}>Login</Button>
+                <Dropdown>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        Login As
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#" onClick={() => props.setModalShow(true)}>NGO</Dropdown.Item>
+                        <Dropdown.Item href="#">Donor</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
             </Container>
         </Navbar>
     )

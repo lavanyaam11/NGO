@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import { Form, Button, Modal } from 'react-bootstrap'
 
 export default function NGOSignIn(props) {
+    const navigate = useNavigate();
+    const onClickHandler = () =>{
+        navigate('/ngoRegistration');
+        props.onHide();
+    }
     return (
         <Modal
             {...props}
@@ -32,7 +38,7 @@ export default function NGOSignIn(props) {
             </Modal.Body>
             <Modal.Footer>
                 Don't have an account?
-                <Button variant="link">Sign Up</Button>
+                <Button variant="link" onClick={onClickHandler}>Sign Up</Button>
             </Modal.Footer>
         </Modal>
     )

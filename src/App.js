@@ -1,24 +1,27 @@
+import React , {useState} from 'react'
+import { BrowserRouter ,Routes , Route } from 'react-router-dom';
 import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import NGOSignIn from './components/NGOSignIn'
 import NGOSignUp from './components/NGOSignUp'
-import React , {useState} from 'react'
 
 function App() {
   const [modalShow, setModalShow] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
+      <BrowserRouter>
         <Header setModalShow={setModalShow}/>
         <NGOSignIn 
         show={modalShow}
         onHide={() => setModalShow(false)}/>
-        <br/>
-        <NGOSignUp />
+        
+        <Routes>
+          <Route path='/ngoRegistration' element={<NGOSignUp />}/>
+        </Routes>
         <br/>
         <Footer />
-      </header>
+        </BrowserRouter>
     </div>
   );
 }
