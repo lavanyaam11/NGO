@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, Form, Button } from 'react-bootstrap';
+import Header from './Header';
 
 export default function NGOSignUp() {
     return (
+        <>
+        <Header/>
         <Container>
             <h1 className="mb-3 fs-3 fw-normal text-center ">Register As NGO</h1>
             <Form>
@@ -46,5 +49,6 @@ export default function NGOSignUp() {
                 </Button>
             </Form>
         </Container>
+        </>
     )
 }

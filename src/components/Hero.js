@@ -1,9 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import './Hero.css';
+import Header from './Header';
+import NGOSignIn from './NGOSignIn';
+// import './Hero.css';
 function Hero() {
+  const [modalShow, setModalShow] = useState(false);
   return (
+    <>
+    <Header setModalShow={setModalShow} />
+    <NGOSignIn 
+        show={modalShow}
+        onHide={() => setModalShow(false)}/>
     <div className='hero-container'>
       <div className='content'>
         <h1>GiveEthCare</h1>
@@ -12,6 +20,7 @@ function Hero() {
         <p>Thank Youuu!!</p>  
       </div>
     </div>
+    </>
   );
 }
 
