@@ -5,7 +5,7 @@ import { Form, Button, Modal } from 'react-bootstrap'
 export default function DonorSignIn(props) {
     const navigate = useNavigate();
     const onClickHandler = () =>{
-        navigate('/ngoRegistration');
+        navigate('/donorRegistration');
         props.onHide();
     }
     return (
