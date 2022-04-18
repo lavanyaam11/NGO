@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import Header from './Header';
 
@@ -9,7 +9,7 @@ export default function NGOSignUp() {
         <Container>
             <h1 className="mb-3 fs-3 fw-normal text-center ">Register As NGO</h1>
             <Form>
-                <Form.Group className="mb-3" controlId="formBasicWallet">
+                <Form.Group className="mb-3" controlId="formOrganizationName">
                     <Form.Label>Organiation Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter your Organization" />
                 </Form.Group>
@@ -39,7 +39,7 @@ export default function NGOSignUp() {
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control type="password" placeholder="Confirm Password" />
                 </Form.Group>
