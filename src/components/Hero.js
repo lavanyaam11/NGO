@@ -50,7 +50,7 @@ function Hero() {
         </Carousel.Item>
       </Carousel>
       <br></br>
-      <h2 class="d-flex justify-content-center">THE TEAM</h2>
+      <h2 className="d-flex justify-content-center">THE TEAM</h2>
       <div className="d-flex justify-content-around">
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src="one.jpg" />

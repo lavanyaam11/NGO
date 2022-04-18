@@ -6,6 +6,8 @@ import logo from '../assets/gec.jpeg'
 export default function Header(props) {
     let history = useLocation();
     let { pathname } = history;
+    console.log(history);
+    console.log(pathname);
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
