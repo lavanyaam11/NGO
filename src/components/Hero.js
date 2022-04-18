@@ -3,15 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Card } from 'react-bootstrap';
 import Header from './Header';
 import NGOSignIn from './NGOSignIn';
+import DonorSignIn from './DonorSignIn';
 // import './Hero.css';
 function Hero() {
   const [modalShow, setModalShow] = useState(false);
+  const [modalDonor, setModalDonor] = useState(false);
   return (
     <>
-      <Header setModalShow={setModalShow} />
+      <Header setModalShow={setModalShow} setModalDonor={setModalDonor}/>
       <NGOSignIn
         show={modalShow}
         onHide={() => setModalShow(false)} />
+      <DonorSignIn
+        show={modalDonor}
+        onHide={() => setModalDonor(false)}
+      />
       <Carousel fade>
         <Carousel.Item>
           <img
@@ -93,8 +99,8 @@ function Hero() {
         </Card>
       </div>
       <br></br>
-      </>
-      );
+    </>
+  );
 }
 
-      export default Hero;
+export default Hero;
