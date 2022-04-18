@@ -9,7 +9,7 @@ import {
 export default function Footer() {
     return (
 
-        <footer className="mb-3 bg-dark footer">
+        <footer className="bg-dark footer">
 
             <div className='social-container'>
                 <div className='social-container-row'>

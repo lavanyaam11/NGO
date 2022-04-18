@@ -13,12 +13,11 @@
 .social-container {
     /* //background: lightslategray; */
     background: transparent;
-    padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 200px
+    padding-top: 12px
   }
   .social-container-row {
       flex-direction: row;
@@ -39,10 +38,11 @@
   }
   .website-rights {
     color: white;
-    padding-top: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     display: center;
   }
-  
+/*   
   @media screen and (max-width: 820px) {
     .footer-links {
       padding-top: 2rem;
@@ -66,4 +66,4 @@
   }
   
   @media screen and (max-width: 768px) {
-  }
+  } */

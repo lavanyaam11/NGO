@@ -13,7 +13,6 @@ function App() {
           <Route path='/' element={<Hero />}/>
           <Route path='/ngoRegistration' element={<NGOSignUp />}/>
         </Routes>
-        <br/>
         <Footer />
         </BrowserRouter>
     </div>
