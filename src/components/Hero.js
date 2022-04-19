@@ -59,7 +59,7 @@ function Hero() {
       <h2 className="d-flex justify-content-center">THE TEAM</h2>
       <div className="d-flex justify-content-around">
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="one.jpg" />
+          <Card.Img variant="top" src="anu.jpg" />
           <Card.Body>
             <Card.Title>Anushree B</Card.Title>
             <Card.Text>
@@ -68,7 +68,7 @@ function Hero() {
           </Card.Body>
         </Card>
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="one.jpg" />
+          <Card.Img variant="top" src="gowry.jpg" />
           <Card.Body>
             <Card.Title>Gowry A V</Card.Title>
             <Card.Text>
@@ -80,7 +80,7 @@ function Hero() {
       <br></br>
       <div className="d-flex justify-content-around">
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="one.jpg" />
+          <Card.Img variant="top" src="lavanya.jpg" />
           <Card.Body>
             <Card.Title>Lavanya A M</Card.Title>
             <Card.Text>
@@ -89,7 +89,7 @@ function Hero() {
           </Card.Body>
         </Card>
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="one.jpg" />
+          <Card.Img variant="top" src="yuki.jpg" />
           <Card.Body>
             <Card.Title>Yuktha N</Card.Title>
             <Card.Text>
