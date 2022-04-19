@@ -56,9 +56,22 @@ function Hero() {
         </Carousel.Item>
       </Carousel>
       <br></br>
+      <h2 className="d-flex justify-content-center">Project Guide</h2>
+      <div className="d-flex justify-content-around">
+        <Card style={{ width: '16rem' }}>
+          <Card.Img variant="top" src="Ashritha.jpg" />
+          <Card.Body>
+            <Card.Title>Ashritha R Murthy</Card.Title>
+            <Card.Text>
+              Bonjour.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+      <br></br>
       <h2 className="d-flex justify-content-center">THE TEAM</h2>
       <div className="d-flex justify-content-around">
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img variant="top" src="anu.jpg" />
           <Card.Body>
             <Card.Title>Anushree B</Card.Title>
@@ -67,7 +80,7 @@ function Hero() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img variant="top" src="gowry.jpg" />
           <Card.Body>
             <Card.Title>Gowry A V</Card.Title>
@@ -79,7 +92,7 @@ function Hero() {
       </div>
       <br></br>
       <div className="d-flex justify-content-around">
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img variant="top" src="lavanya.jpg" />
           <Card.Body>
             <Card.Title>Lavanya A M</Card.Title>
@@ -88,7 +101,7 @@ function Hero() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '16rem' }}>
           <Card.Img variant="top" src="yuki.jpg" />
           <Card.Body>
             <Card.Title>Yuktha N</Card.Title>
