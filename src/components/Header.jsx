@@ -29,7 +29,7 @@ export default function Header(props) {
                         <Dropdown.Item href="#"onClick={() => props.setModalDonor(true)}>Donor</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>}
-                {pathname !=='/' && <Button variant='danger'>Log Out</Button>}
+                {pathname !=='/' && pathname !='/donorRegistration' && pathname !== '/ngoRegistration' && <Button variant='danger'>Log Out</Button>}
                 
             </Container>
         </Navbar>

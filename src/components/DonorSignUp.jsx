@@ -6,6 +6,7 @@ export default function NGOSignUp() {
     return (
         <>
         <Header/>
+        <br />
         <Container>
             <h1 className="mb-3 fs-3 fw-normal text-center ">Register As Donor</h1>
             <Form>
