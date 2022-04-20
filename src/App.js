@@ -6,6 +6,7 @@ import NGOSignUp from './components/NGOSignUp'
 import DonorSignUp from './components/DonorSignUp';
 import Hero from './components/Hero';
 import NGO from './pages/NGO';
+import DonorHomePage from './pages/Donor/DonorHomePage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/ngoRegistration' element={<NGOSignUp />}/>
           <Route path='/donorRegistration' element={<DonorSignUp />}/>
           <Route path='/ngo' element={<NGO />}/>
+          <Route path='/donorHomePage' element={<DonorHomePage />}/>
         </Routes>
         <Footer />
         </BrowserRouter>

@@ -69,7 +69,7 @@ app.post("/LoginNGO",(req,res)=>{
                res.status(401).send({message:"wrong credentials"})
            }
         }else{
-            res.status(400).send("not register")
+            res.status(400).send("not registered")
         }
     })
 });
@@ -103,7 +103,7 @@ app.post("/LoginDonor",(req,res)=>{
                res.status(401).send({message:"wrong credentials"})
            }
         }else{
-            res.status(400).send("not register")
+            res.status(400).send("not registered")
         }
     })
 });
