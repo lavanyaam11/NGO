@@ -50,9 +50,9 @@ app.post("/RegisterNGO",(req,res)=>{
             const user = new NGO({orgName,owner,addhar,certificate,orgAddress,password})
             user.save(err=>{
                 if(err){
-                    res.send(err)
+                    res.status(400).send(err)
                 }else{
-                    res.send({message:"sucessfull"})
+                    res.status(200).send({message:"sucessfull"})
                 }
             })
         }
@@ -64,9 +64,9 @@ app.post("/LoginNGO",(req,res)=>{
     NGO.findOne({orgAddress:orgAddress},(err,user)=>{
         if(user){
            if(password === user.password){
-               res.send({message:"login sucess",user:user})
+               res.status(200).send({message:"login sucess",user:user})
            }else{
-               res.send({message:"wrong credentials"})
+               res.status(401).send({message:"wrong credentials"})
            }
         }else{
             res.send("not register")
@@ -84,9 +84,9 @@ app.post("/RegisterDonor",(req,res)=>{
             const user = new Donor({donor,email,addhar,walletAddress,password})
             user.save(err=>{
                 if(err){
-                    res.send(err)
+                    res.status(400).send(err)
                 }else{
-                    res.send({message:"sucessfull"})
+                    res.status(200).send({message:"sucessfull"})
                 }
             })
         }
@@ -98,9 +98,9 @@ app.post("/LoginDonor",(req,res)=>{
     Donor.findOne({orgAddress:orgAddress},(err,user)=>{
         if(user){
            if(password === user.password){
-               res.send({message:"login sucess",user:user})
+               res.status(200).send({message:"login sucess",user:user})
            }else{
-               res.send({message:"wrong credentials"})
+               res.status(401).send({message:"wrong credentials"})
            }
         }else{
             res.send("not register")
