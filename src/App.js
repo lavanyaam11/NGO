@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import NGOSignUp from './components/NGOSignUp'
 import DonorSignUp from './components/DonorSignUp';
 import Hero from './components/Hero';
+import NGO from './pages/NGO';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/' element={<Hero />}/>
           <Route path='/ngoRegistration' element={<NGOSignUp />}/>
           <Route path='/donorRegistration' element={<DonorSignUp />}/>
+          <Route path='/ngo' element={<NGO />}/>
         </Routes>
         <Footer />
         </BrowserRouter>
