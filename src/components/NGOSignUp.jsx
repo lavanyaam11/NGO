@@ -6,10 +6,10 @@ import Header from './Header';
 
 export default function NGOSignUp() {
     const [orgName, setOrgName] = useState("");
-    const [ownerName, setOwnerName] = useState("");
-    const [adhaar, setAdhaar] = useState("");
+    const [owner, setOwnerName] = useState("");
+    const [addhar, setAdhaar] = useState("");
     const [certificate, setCertificate] = useState("");
-    const [wallet, setWallet] = useState("");
+    const [orgAddress, setWallet] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -20,16 +20,16 @@ export default function NGOSignUp() {
 
         const user ={
             orgName,
-            ownerName,
-            adhaar,
+            owner,
+            addhar,
             certificate,
-            wallet,
+            orgAddress,
             password
         }
 
         if(confirmPassword === password){
 
-            if (orgName && ownerName && adhaar && certificate && wallet && password) {
+            if (orgName && owner && addhar && certificate && orgAddress && password) {
                 axios.post("http://localhost:5000/RegisterNGO", user)
                     .then((res) => {console.log(res)
                         alert("Registered Successfully,Please Login ")
@@ -59,12 +59,12 @@ export default function NGOSignUp() {
 
                         <Form.Group className="mb-3" controlId="formBasicOwner">
                             <Form.Label>Owner Name</Form.Label>
-                            <Form.Control type="text" value={ownerName} onChange={(e) => setOwnerName(e.target.value)} placeholder="Enter Owner Name" />
+                            <Form.Control type="text" value={owner} onChange={(e) => setOwnerName(e.target.value)} placeholder="Enter Owner Name" />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId='formBasicId'>
                             <Form.Label>Addhaar Number</Form.Label>
-                            <Form.Control type="text" value={adhaar} onChange={(e) => setAdhaar(e.target.value)} placeholder='Enter Addhaar Number' />
+                            <Form.Control type="text" value={addhar} onChange={(e) => setAdhaar(e.target.value)} placeholder='Enter Addhaar Number' />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId='formBasicCerificate'>
@@ -74,7 +74,7 @@ export default function NGOSignUp() {
 
                         <Form.Group className="mb-3" controlId="formBasicWallet">
                             <Form.Label>Wallet address</Form.Label>
-                            <Form.Control type="text" value={wallet} onChange={(e) => setWallet(e.target.value)} placeholder="Enter your wallet address" />
+                            <Form.Control type="text" value={orgAddress} onChange={(e) => setWallet(e.target.value)} placeholder="Enter your wallet address" />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
