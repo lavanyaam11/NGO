@@ -1,10 +1,10 @@
 import React from "react";
-import logo from '../../assets/gec.jpeg'
-import { Container } from 'react-bootstrap';
+import logo from "../../assets/gec.jpeg";
+import { Container } from "react-bootstrap";
 
 function Navbar() {
   return (
-    <>
+    <div>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
@@ -18,7 +18,7 @@ function Navbar() {
           </Navbar.Brand>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 }
 export default Navbar;
