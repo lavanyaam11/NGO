@@ -21,14 +21,19 @@ export default function NGOSignIn(props) {
         if (orgAddress && password) {
             axios.post("http://localhost:5000/LoginNGO", user)
                 .then((res) => {
-                    console.log(res)
-                    alert("Successfully Logged in!!")
+                    alert(res.data)
                     navigate('/');
                     props.onHide();
+
+                }).catch((e) => { alert("Wrong Credentials") }).finally(() => {
+                    setWallet("")
+                    setPassword("")
                 })
         }
         else {
             alert("invalid input");
+            setWallet("")
+            setPassword("")
         }
     }
     return (

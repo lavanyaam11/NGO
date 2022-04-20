@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { Form, Button, Modal } from 'react-bootstrap'
 
 export default function DonorSignIn(props) {
-    const [walletAddress,setWalletAddress] = useState();
+    const [walletAddress, setWalletAddress] = useState();
     const [password, setPassword] = useState();
     const navigate = useNavigate();
-    const onClickHandler = () =>{
+    const onClickHandler = () => {
         navigate('/donorRegistration');
         props.onHide();
     }
@@ -21,14 +21,19 @@ export default function DonorSignIn(props) {
         if (walletAddress && password) {
             axios.post("http://localhost:5000/LoginDonor", user)
                 .then((res) => {
-                    console.log(res)
-                    alert("Successfully Logged in!!")
-                    navigate('/');
-                    props.onHide();
+                        alert(res.data)
+                        navigate('/');
+                        props.onHide();
+
+                }).catch((e)=>{alert("Wrong Credentials")}).finally(()=>{
+                    setWalletAddress("")
+                    setPassword("")
                 })
         }
         else {
             alert("invalid input");
+            setWalletAddress("")
+            setPassword("")
         }
     }
 
@@ -48,7 +53,7 @@ export default function DonorSignIn(props) {
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicWallet">
                         <Form.Label>Wallet address</Form.Label>
-                        <Form.Control type="text" value ={walletAddress} onChange={(e) => setWalletAddress(e.target.value)} placeholder="Enter your wallet address" />
+                        <Form.Control type="text" value={walletAddress} onChange={(e) => setWalletAddress(e.target.value)} placeholder="Enter your wallet address" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -56,8 +61,8 @@ export default function DonorSignIn(props) {
                         <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                     </Form.Group>
                     <Button variant="primary" type="submit" onClick={onSubmitHandler}>
-                    Sign In
-                </Button>
+                        Sign In
+                    </Button>
                 </Form>
             </Modal.Body>
             <Modal.Footer>
