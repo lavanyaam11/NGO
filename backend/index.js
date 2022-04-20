@@ -94,8 +94,8 @@ app.post("/RegisterDonor",(req,res)=>{
 })
 
 app.post("/LoginDonor",(req,res)=>{
-    const {orgAddress,password} =req.body;
-    Donor.findOne({orgAddress:orgAddress},(err,user)=>{
+    const {walletAddress,password} =req.body;
+    Donor.findOne({walletAddress:walletAddress},(err,user)=>{
         if(user){
            if(password === user.password){
                res.status(200).send({message:"login sucess",user:user})
