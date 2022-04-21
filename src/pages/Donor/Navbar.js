@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../assets/gec.jpeg";
-import { Container } from "react-bootstrap";
+import { Container,Dropdown, Navbar } from "react-bootstrap";
 
-function Navbar() {
+function NavBar() {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
@@ -11,14 +11,25 @@ function Navbar() {
             <img
               alt=""
               src={logo}
-              width="30"
-              height="30"
+              width="60"
+              height="61"
               className="d-inline-block align-top"
             />{" "}
           </Navbar.Brand>
+          <Dropdown>
+            <Dropdown.Toggle variant="primary" id="dropdown">
+              Profile
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">User Profile</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
+              <Dropdown.Item href="/">LogOut</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Container>
       </Navbar>
     </div>
   );
 }
-export default Navbar;
+export default NavBar;

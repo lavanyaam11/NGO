@@ -1,35 +1,12 @@
 import React from "react";
 import image from "../../assets/oneee.jpg";
-import logo from "../../assets/gec.jpeg";
-import { Card, Dropdown, Navbar, Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import NavBar from "./Navbar";
 
 function DonorHomePage() {
   return (
     <div style={{backgroundImage: `url(${image}` }}>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src={logo}
-              width="60"
-              height="61"
-              className="d-inline-block align-top"
-            />{" "}
-          </Navbar.Brand>
-          <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown">
-              Profile
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">User Profile</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
-              <Dropdown.Item href="/">LogOut</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </Container>
-      </Navbar>
+      <NavBar/>
       <br></br>
       <div className="d-flex justify-content-around">
         <Card style={{ width: "20rem", height: "16rem" }}>
