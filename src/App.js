@@ -9,6 +9,8 @@ import NGO from './pages/NGO';
 import DonorHomePage from './pages/Donor/DonorHomePage';
 import ApproveReject from './pages/Donor/ApproveReject';
 import DonateFunds from './pages/Donor/DonateFunds';
+import AvlNGO from './pages/Donor/AvlNGO';
+import HistoryOfDonation from './pages/Donor/HistoryOfDonation';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path='/donorHomePage' element={<DonorHomePage />}/>
           <Route path='/approveReject' element={<ApproveReject />}/>
           <Route path='/donateFunds' element={<DonateFunds />}/>
+          <Route path='/avlngo' element={<AvlNGO />}/>
+          <Route path='/historyofdonation' element={<HistoryOfDonation />}/>
         </Routes>
         <Footer />
         </BrowserRouter>

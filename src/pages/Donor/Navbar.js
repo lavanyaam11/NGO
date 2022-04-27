@@ -1,10 +1,6 @@
 import React from "react";
 import logo from "../../assets/gec.jpeg";
-<<<<<<< HEAD
-import { Container, Navbar, Dropdown } from "react-bootstrap";
-=======
 import { Container,Dropdown, Navbar } from "react-bootstrap";
->>>>>>> 98c62a19d2cf4a73c18096b76ec36f32621d933a
 
 function NavBar() {
   return (

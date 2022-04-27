@@ -39,7 +39,7 @@ function DonorHomePage() {
             <Card.Text>List of available NGOs..</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Card.Link href="#">NGOs</Card.Link>
+            <Card.Link href="/avlngo">NGOs</Card.Link>
           </Card.Footer>
         </Card>
         <Card style={{ width: "20rem", height: "16rem" }}>
@@ -48,7 +48,7 @@ function DonorHomePage() {
             <Card.Text>List of all your transactions.</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Card.Link href="#">HISTORY</Card.Link>
+            <Card.Link href="/historyofdonation">HISTORY</Card.Link>
           </Card.Footer>
         </Card>
       </div>
