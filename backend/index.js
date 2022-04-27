@@ -19,7 +19,7 @@ mongooes.connect("mongodb://localhost:27017/auth",{
 const NgoSchema = new mongooes.Schema({
     orgName: String,
     owner: String,
-    addhar: String,
+    aadhar: String,
     certificate: String,
     orgAddress: String,
     password: String
@@ -28,7 +28,7 @@ const NgoSchema = new mongooes.Schema({
 const DonorSchema = new mongooes.Schema({
     donor: String,
     email: String,
-    addhar: String,
+    aadhar: String,
     walletAddress: String,
     password: String
 })
@@ -42,12 +42,12 @@ app.get('/', (req, res) => {
 
 app.post("/RegisterNGO",(req,res)=>{
     console.log(req.body) 
-    const {orgName,owner,addhar,certificate,orgAddress,password} =req.body;
-    NGO.findOne({addhar:addhar},(err,user)=>{
+    const {orgName,owner,aadhar,certificate,orgAddress,password} =req.body;
+    NGO.findOne({aadhar:aadhar},(err,user)=>{
         if(user){
             res.send({message:"user already exist"})
         }else {
-            const user = new NGO({orgName,owner,addhar,certificate,orgAddress,password})
+            const user = new NGO({orgName,owner,aadhar,certificate,orgAddress,password})
             user.save(err=>{
                 if(err){
                     res.status(400).send(err)
@@ -76,12 +76,12 @@ app.post("/LoginNGO",(req,res)=>{
 
 app.post("/RegisterDonor",(req,res)=>{
     console.log(req.body) 
-    const {donor,email,addhar,walletAddress,password} =req.body;
+    const {donor,email,aadhar,walletAddress,password} =req.body;
     Donor.findOne({email:email},(err,user)=>{
         if(user){
             res.send({message:"user already exist"})
         }else {
-            const user = new Donor({donor,email,addhar,walletAddress,password})
+            const user = new Donor({donor,email,aadhar,walletAddress,password})
             user.save(err=>{
                 if(err){
                     res.status(400).send(err)

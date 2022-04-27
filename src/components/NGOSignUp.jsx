@@ -7,7 +7,7 @@ import Header from './Header';
 export default function NGOSignUp() {
     const [orgName, setOrgName] = useState("");
     const [owner, setOwnerName] = useState("");
-    const [addhar, setAdhaar] = useState("");
+    const [aadhar, setAdhaar] = useState("");
     const [certificate, setCertificate] = useState("");
     const [orgAddress, setWallet] = useState("");
     const [password, setPassword] = useState("");
@@ -21,7 +21,7 @@ export default function NGOSignUp() {
         const user ={
             orgName,
             owner,
-            addhar,
+            aadhar,
             certificate,
             orgAddress,
             password
@@ -29,7 +29,7 @@ export default function NGOSignUp() {
 
         if(confirmPassword === password){
 
-            if (orgName && owner && addhar && certificate && orgAddress && password) {
+            if (orgName && owner && aadhar && certificate && orgAddress && password) {
                 axios.post("http://localhost:5000/RegisterNGO", user)
                     .then((res) => {console.log(res)
                         alert("Registered Successfully,Please Login ")
@@ -64,7 +64,7 @@ export default function NGOSignUp() {
 
                         <Form.Group className="mb-3" controlId='formBasicId'>
                             <Form.Label>Addhaar Number</Form.Label>
-                            <Form.Control type="text" value={addhar} onChange={(e) => setAdhaar(e.target.value)} placeholder='Enter Addhaar Number' />
+                            <Form.Control type="text" value={aadhar} onChange={(e) => setAdhaar(e.target.value)} placeholder='Enter Addhaar Number' />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId='formBasicCerificate'>

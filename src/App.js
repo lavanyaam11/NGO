@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import NGO from './pages/NGO';
 import DonorHomePage from './pages/Donor/DonorHomePage';
 import ApproveReject from './pages/Donor/ApproveReject';
+import DonateFunds from './pages/Donor/DonateFunds';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/ngo' element={<NGO />}/>
           <Route path='/donorHomePage' element={<DonorHomePage />}/>
           <Route path='/approveReject' element={<ApproveReject />}/>
+          <Route path='/donateFunds' element={<DonateFunds />}/>
         </Routes>
         <Footer />
         </BrowserRouter>

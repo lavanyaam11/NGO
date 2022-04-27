@@ -8,7 +8,7 @@ export default function NGOSignUp() {
 
     const [donor, setDonor] = useState("");
     const [email, setEmail] = useState("");
-    const [addhar, setAdhaar] = useState("");
+    const [aadhar, setAdhaar] = useState("");
     const [walletAddress, setwalletAddress] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -21,14 +21,14 @@ export default function NGOSignUp() {
         const user ={
             donor,
             email,
-            addhar,
+            aadhar,
             walletAddress,
             password
         }
 
         if(confirmPassword === password){
 
-            if (donor && email && addhar && walletAddress && password) {
+            if (donor && email && aadhar && walletAddress && password) {
                 axios.post("http://localhost:5000/RegisterDonor", user)
                     .then((res) => {console.log(res)
                         alert("Registered Successfully,Please Login ")
@@ -65,7 +65,7 @@ export default function NGOSignUp() {
 
                 <Form.Group className="mb-3" controlId='formBasicId'>
                     <Form.Label>Addhaar Number</Form.Label>
-                    <Form.Control type="text" value={addhar} onChange={(e) => setAdhaar(e.target.value)} placeholder='Enter Addhaar Number'/>
+                    <Form.Control type="text" value={aadhar} onChange={(e) => setAdhaar(e.target.value)} placeholder='Enter Addhaar Number'/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicWallet">

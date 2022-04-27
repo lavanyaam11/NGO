@@ -1,11 +1,11 @@
 import React from "react";
 import { Card, Button, Nav } from "react-bootstrap";
-import Header from "../../components/Header";
+import NavBar from "./NavBar";
 
 export default function ApproveReject() {
   return (
     <>
-      <Header></Header>
+      <NavBar></NavBar>
       <Card>
         <Card.Header>
           <Nav variant="tabs" defaultActiveKey="#first">
