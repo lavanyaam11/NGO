@@ -1,12 +1,21 @@
 import React from "react";
 import image from "../../assets/oneee.jpg";
+<<<<<<< HEAD
 import NavBar from "./NavBar";
 import { Card } from "react-bootstrap";
+=======
+import { Card } from "react-bootstrap";
+import NavBar from "./Navbar";
+>>>>>>> 98c62a19d2cf4a73c18096b76ec36f32621d933a
 
 function DonorHomePage() {
   return (
     <div style={{backgroundImage: `url(${image}` }}>
+<<<<<<< HEAD
       <NavBar></NavBar>
+=======
+      <NavBar/>
+>>>>>>> 98c62a19d2cf4a73c18096b76ec36f32621d933a
       <br></br>
       <div className="d-flex justify-content-around">
         <Card style={{ width: "20rem", height: "16rem" }}>
