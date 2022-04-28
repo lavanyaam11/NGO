@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../../assets/gec.jpeg";
+import { useLocation } from "react-router-dom";
 import { Navbar, Container, NavDropdown, Nav, Form ,FormControl,Button } from 'react-bootstrap';
 
 export default function NavBar() {
+    let history = useLocation();
+    let { pathname } = history;
     return (
         <div><Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -18,8 +21,10 @@ export default function NavBar() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Create Request</Nav.Link>
-                        <Nav.Link href="#pricing">History</Nav.Link>
+                    {pathname !== '/createrequest' &&
+                        <Nav.Link href="/createrequest">Create Request</Nav.Link>}
+                    {pathname !== '/ngohistory' &&
+                        <Nav.Link href="/ngohistory">History</Nav.Link>}
                     </Nav>
                     <Nav>
                     <Form className="d-flex">
