@@ -22,7 +22,6 @@ export default function DonorSignIn(props) {
       axios
         .post("http://localhost:5000/LoginDonor", user)
         .then((res) => {
-            alert(res.data);
             navigate("/donorHomePage");
             props.onHide();
         })
