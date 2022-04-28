@@ -11,6 +11,8 @@ import ApproveReject from './pages/Donor/ApproveReject';
 import DonateFunds from './pages/Donor/DonateFunds';
 import AvlNGO from './pages/Donor/AvlNGO';
 import HistoryOfDonation from './pages/Donor/HistoryOfDonation';
+import History from './pages/NGO/History';
+import CreateRequest from './pages/NGO/CreateRequest';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path='/ngoRegistration' element={<NGOSignUp />}/>
           <Route path='/donorRegistration' element={<DonorSignUp />}/>
           <Route path='/ngo' element={<NGO />}/>
+          <Route path='/createrequest' element={<CreateRequest />}/>
+          <Route path='/ngohistory' element={<History />}/>
           <Route path='/donorHomePage' element={<DonorHomePage />}/>
           <Route path='/approveReject' element={<ApproveReject />}/>
           <Route path='/donateFunds' element={<DonateFunds />}/>
