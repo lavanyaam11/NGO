@@ -136,15 +136,7 @@ export default function History() {
                             <td>100 Ether</td>
                             <td>Active</td>
                         </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Care India</td>
-                            <td>carpoytg567vfrt</td>
-                            <td>Girl Eduaction</td>
-                            <td>100 Ether</td>
-                            <td>100 Ether</td>
-                            <td>Active</td>
-                        </tr>
+
                         
                     </tbody>
                 </Table>

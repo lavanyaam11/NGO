@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from "../../assets/gec.jpeg";
 import { useLocation } from "react-router-dom";
 import { Navbar, Container, NavDropdown, Nav, Form ,FormControl,Button } from 'react-bootstrap';
@@ -39,7 +39,7 @@ export default function NavBar() {
                         <NavDropdown title="Profie" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">NGO Profile</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">LogOut</NavDropdown.Item>
+                            <NavDropdown.Item href="/">LogOut</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
