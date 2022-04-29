@@ -3,7 +3,7 @@ import logo from "../../assets/gec.jpeg";
 import { useLocation } from "react-router-dom";
 import { Navbar, Container, NavDropdown, Nav, Form ,FormControl,Button } from 'react-bootstrap';
 
-export default function NavBar() {
+export default function NavBar(props) {
     let history = useLocation();
     let { pathname } = history;
     return (
@@ -37,7 +37,7 @@ export default function NavBar() {
                         <Button variant="outline-success">Search</Button>
                     </Form>
                         <NavDropdown title="Profie" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">NGO Profile</NavDropdown.Item>
+                            <NavDropdown.Item href="#" onClick={() => props.setModalShow(true)}>NGO Profile</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/">LogOut</NavDropdown.Item>
                         </NavDropdown>
