@@ -9,7 +9,7 @@ export default function NavBar(props) {
     return (
         <div><Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/ngo">
                     <img
                         alt=""
                         src={logo}

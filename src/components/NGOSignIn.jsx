@@ -21,7 +21,6 @@ export default function NGOSignIn(props) {
         if (orgAddress && password) {
             axios.post("http://localhost:5000/LoginNGO", user)
                 .then((res) => {
-                    alert("Logged in succesfully ")
                     navigate('/ngo');
                     props.onHide();
 
