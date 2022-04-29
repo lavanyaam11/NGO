@@ -1,15 +1,15 @@
 import React from "react";
 import logo from "../../assets/gec.jpeg";
 import { useLocation } from "react-router-dom";
-import { Container, Dropdown, Navbar, Nav } from "react-bootstrap";
+import { Container, Dropdown, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
-function NavBar() {
+function NavBar(props) {
   let history = useLocation();
   let { pathname } = history;
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-        <Container fluid='md'>
+        <Container fluid="md">
           <Navbar.Brand href="/donorHomePage">
             <img
               alt=""
@@ -30,7 +30,12 @@ function NavBar() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">User Profile</Dropdown.Item>
+              <NavDropdown.Item
+                href="#"
+                onClick={() => props.setModalShow(true)}
+              >
+                User Profile
+              </NavDropdown.Item>
               <Dropdown.Item href="/">Logout</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

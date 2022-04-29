@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 // import image from "../../assets/oneee.jpg";
 import NavBar from "./NavBar";
 import { Card } from "react-bootstrap";
+import DonorProfile from './DonorProfile';
 
 function DonorHomePage() {
+  const [modalShow, setModalShow] = useState(false);
   return (
     <div>
       {/* style={{backgroundImage: `url(${image}` }} */}
-      <NavBar></NavBar>
+      <div>
+        <NavBar setModalShow={setModalShow} />
+        <DonorProfile show={modalShow} onHide={() => setModalShow(false)} />
+      </div>
       <br></br>
       <div className="d-flex justify-content-around">
         <Card style={{ width: "20rem", height: "16rem" }}>
