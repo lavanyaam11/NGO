@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, Container,Button } from "react-bootstrap";
+import { Table, Container, Button } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import NavBar from "./NavBar";
 
@@ -9,10 +9,12 @@ export default function History() {
         <>
             <NavBar></NavBar>
             <div className='d-flex justify-content-lg-between p-2'>
-            <h1 className="mb-3 fs-3 fw-normal text-center ">History</h1>
-            <Button variant="danger" type="danger" onClick={()=>{navigate('/ngo')}}>
-                        Cancel
-            </Button>
+                <h1 className="mb-3 fs-3 fw-normal text-center ">
+                    History 
+                </h1>
+                <Button variant="danger" type="danger" onClick={() => { navigate('/ngo') }} size="lg">
+                    Back
+                </Button>
             </div>
             <Container>
                 <Table striped bordered hover variant="dark">
@@ -137,7 +139,7 @@ export default function History() {
                             <td>Active</td>
                         </tr>
 
-                        
+
                     </tbody>
                 </Table>
             </Container>

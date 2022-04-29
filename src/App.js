@@ -13,6 +13,7 @@ import AvlNGO from './pages/Donor/AvlNGO';
 import HistoryOfDonation from './pages/Donor/HistoryOfDonation';
 import History from './pages/NGO/History';
 import CreateRequest from './pages/NGO/CreateRequest';
+import './App.css'
 
 function App() {
   return (
