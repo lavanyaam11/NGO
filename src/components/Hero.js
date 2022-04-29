@@ -4,7 +4,7 @@ import { Carousel, Card } from 'react-bootstrap';
 import Header from './Header';
 import NGOSignIn from './NGOSignIn';
 import DonorSignIn from './DonorSignIn';
-// import './Hero.css';
+
 function Hero() {
   const [modalShow, setModalShow] = useState(false);
   const [modalDonor, setModalDonor] = useState(false);
@@ -38,20 +38,20 @@ function Hero() {
           />
 
           <Carousel.Caption>
-            <h3>Thank youu</h3>
+            <h3>Good Job</h3>
             <p>As you have embarked upon the journey of charity, you must keep yourself abreast of the most significant non-governmental organisations. International child rights NGO Save the Children is India’s most renowned and trust children’s charity, and runs pan-India projects that brings access to essential services like healthcare, education, social protection schemes and life-saving aid during disasters. Powered by kind-hearted individuals like yourself as well as corporations, the NGO is able to maintain a consistent supply chain of essential life-saving medicine, nutrition, and aid services. The knowledge that your hard-earned money has gone to a meaningful goal like child rights will give you impetus to do more for society.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100 h-50"
-            src="/oneee.jpg"
+            src="/backg.jpg"
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Thinking</h3>
-            <p>Still thinking....</p>
+            <h3>Thank you</h3>
+            <p>You just made the world a better place to live.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
