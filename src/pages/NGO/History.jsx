@@ -2,17 +2,36 @@ import React from 'react'
 import { Table, Container, Button } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import NavBar from "./NavBar";
+import { tokenAddress } from '../../constants';
+import { ethers } from 'ethers'
+import donation from '../../artifacts/contracts/DonationToOrganization.sol/DonationToOrganization.json'
 
 export default function History() {
+
+    async function fetchGreeting() {
+        if (typeof window.ethereum !== 'undefined') {
+          const provider = new ethers.providers.Web3Provider(window.ethereum)
+          console.log({ provider })
+          const contract = new ethers.Contract(tokenAddress, donation.abi, provider)
+          console.log({ contract })
+          try {
+              console.log("Hi")
+            const data = await contract.requests(1);
+            console.log('data: ', data)
+          } catch (err) {
+            console.log("Error: ", err)
+          }
+        }    
+    }
     const navigate = useNavigate()
     return (
         <>
             <NavBar></NavBar>
             <div className='d-flex justify-content-lg-between p-2'>
                 <h1 className="mb-3 fs-3 fw-normal text-center ">
-                    History 
+                    History
                 </h1>
-                <Button variant="danger" type="danger" onClick={() => { navigate('/ngo') }} size="lg">
+                <Button variant="danger" type="danger" onClick={fetchGreeting} size="lg">
                     Back
                 </Button>
             </div>

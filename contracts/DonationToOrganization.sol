@@ -1,10 +1,9 @@
 pragma experimental ABIEncoderV2;
-pragma solidity ^0.4.25;
+pragma solidity ^ 0.4.25;
 
-contract NGO {
-    address public admin;
+contract DonationToOrganization {
     uint public totalContributors; 
-
+    mapping(address=>bool) available_address;
     struct Request {
         string org_name;
         address  org_address;
@@ -20,6 +19,10 @@ contract NGO {
 
     Request [] public requests;
 
+    // struct NGO_Info {
+
+    // }
+
     // struct Donor_Info {
     //     string donor_name;
     //     address donor_wallet_address;
@@ -31,7 +34,6 @@ contract NGO {
     struct Histroy {
         string org_name;
         string cause_name;
-        // string donor_name;
         address donor_address;
         uint amount;
     }
@@ -65,10 +67,10 @@ contract NGO {
 
     function donate(string memory _org_name,string memory _cause_name) public payable{
         for(uint i=0;i<requests.length;i++){
-            require(compareStrings(requests[i].org_name,_org_name) &&compareStrings(requests[i].cause_name,_cause_name),"Invalid");
-            require(requests[i].amount > requests[i].amount_collected,"Required Fund has been collected already");
-            requests[i].amount_collected += msg.value/1000000000000000000;
-            // donor_histroy[msg.sender][_cause_name] = msg.value;
+            if(compareStrings(requests[i].org_name,_org_name) && compareStrings(requests[i].cause_name,_cause_name)){
+                require(requests[i].amount > requests[i].amount_collected,"Required Fund has been collected already");
+                //  require(requests[i].numberOfVoters > totalContributors / 2,"The project you are trying to donate is not yet approved");
+                requests[i].amount_collected += msg.value/1000000000000000000;
             Histroy memory newHis = Histroy({
                 org_name: _org_name,
                 cause_name: _cause_name,
@@ -77,10 +79,13 @@ contract NGO {
             });
 
             histroy.push(newHis);
+                
+            }
+            //  require(requests[i].numberOfVoters > totalContributors / 2,"");
         }
     }
 
-    function compareStrings(string memory a, string memory b) private view returns (bool) {
+    function compareStrings(string memory a, string memory b) private pure returns (bool) {
         return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))));
     }
 
